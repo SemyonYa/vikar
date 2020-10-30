@@ -1,0 +1,12 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  a {
+    display: block;
+    padding: 20px;
+    margin: 5px;
+    border: solid 1px #ccc;
+  }
+}

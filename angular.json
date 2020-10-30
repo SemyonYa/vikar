@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vikar"
+    }
+  },
+  "defaultProject": "vikar",
+  "cli": {
+    "analytics": "b2b52b7e-9528-452b-a6dd-35468332f93b"
+  }
 }

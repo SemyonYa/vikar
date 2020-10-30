@@ -1,0 +1,46 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+
+  .first {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/assets/img/car-grey.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .second {
+    min-height: 100vh;
+  }
+
+  .third {
+    min-height: 100vh;
+  }
+
+  .fourth {
+    min-height: 100vh;
+  }
+}
