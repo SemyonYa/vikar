@@ -1,7 +1,7 @@
 import { trigger, state, transition, style, animate } from '@angular/animations';
 
-export const menuAnimation =
-    trigger('menuAnimation', [
+export const menuItemAnimation =
+    trigger('menuItemAnimation', [
         transition(':enter', [
             style({
                 transform: 'translateX(-100%)'
@@ -13,7 +13,7 @@ export const menuAnimation =
         ]),
         transition(':leave', [
             style({ transform: '*' }),
-            animate('.3s ease-in',
+            animate('.7s ease-in',
                 style({ transform: 'translateX(-100%)' }))
         ])
     ]);

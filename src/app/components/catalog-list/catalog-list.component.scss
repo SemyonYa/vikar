@@ -1,0 +1,10 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+
+  app-catalog-list-item {
+    display: block;
+    // width: 100%;
+  }
+}

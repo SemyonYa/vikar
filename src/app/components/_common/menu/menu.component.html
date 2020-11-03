@@ -1,9 +1,27 @@
-<div class="wrap">
+<div [ngClass]="{'wrap': true, 'hidden': !menuBackAnimation}">
+  <!-- <div class="items"> -->
+  <h3>Menu <img src="/assets/icon/close.svg" (click)="hideMenu()"></h3>
+  <a [ngClass]="{'hidden': !menuItemsVisible}" [routerLink]="['/']" routerLinkActive="active"
+    (click)="hideMenu()">home</a>
+  <a [ngClass]="{'hidden': !menuItemsVisible}" [routerLink]="['/catalog']" routerLinkActive="active"
+    (click)="hideMenu()">catalog</a>
 
-  <a [routerLink]="['/']" routerLinkActive="active" (click)="hideMenu()">home</a>
-  <a [routerLink]="['/catalog']" routerLinkActive="active" (click)="hideMenu()">catalog</a>
-  <a [routerLink]="['/materials']" routerLinkActive="active" (click)="hideMenu()">materials</a>
-  <a [routerLink]="['/install']" routerLinkActive="active" (click)="hideMenu()">install</a>
-  <a [routerLink]="['/cart']" routerLinkActive="active" (click)="hideMenu()">cart</a>
+  <a [ngClass]="{'catalog': true, 'hidden': !menuItemsVisible}" style="background-image: url('/assets/img/bmw-01.jpg');"
+    [routerLink]="['/catalog']" routerLinkActive="active" (click)="hideMenu()"> #1</a>
+  <a [ngClass]="{'catalog': true, 'hidden': !menuItemsVisible}" style="background-image: url('/assets/img/bmw-02.jpg');"
+    [routerLink]="['/catalog']" routerLinkActive="active" (click)="hideMenu()"> #2</a>
+  <a [ngClass]="{'catalog': true, 'hidden': !menuItemsVisible}" style="background-image: url('/assets/img/bmw-03.jpg');"
+    [routerLink]="['/catalog']" routerLinkActive="active" (click)="hideMenu()"> #3</a>
 
+  <a [ngClass]="{'hidden': !menuItemsVisible}" [routerLink]="['/materials']" routerLinkActive="active"
+    (click)="hideMenu()">materials</a>
+  <a [ngClass]="{'hidden': !menuItemsVisible}" [routerLink]="['/install']" routerLinkActive="active"
+    (click)="hideMenu()">install</a>
+  <a [ngClass]="{'hidden': !menuItemsVisible}" [routerLink]="['/cart']" routerLinkActive="active"
+    (click)="hideMenu()">cart</a>
+
+  <!-- <p class="phone">
+    <a href="tel:+79107973171">+7 910 797 31 71</a>
+  </p> -->
+  <!-- </div> -->
 </div>

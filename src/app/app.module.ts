@@ -14,6 +14,10 @@ import { CartComponent } from './components/cart/cart.component';
 import { InstallComponent } from './components/install/install.component';
 import { ModalComponent } from './components/_common/modal/modal.component';
 import { RouterModule } from '@angular/router';
+import { CatalogListComponent } from './components/catalog-list/catalog-list.component';
+import { CatalogAppsComponent } from './components/catalog-apps/catalog-apps.component';
+import { CatalogAppsItemComponent } from './components/catalog-apps-item/catalog-apps-item.component';
+import { CatalogListItemComponent } from './components/catalog-list-item/catalog-list-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { RouterModule } from '@angular/router';
     InstallComponent,
     MenuComponent,
     HeaderComponent,
-    ModalComponent
+    ModalComponent,
+    CatalogListComponent,
+    CatalogAppsComponent,
+    CatalogAppsItemComponent,
+    CatalogListItemComponent
   ],
   imports: [
     BrowserModule,

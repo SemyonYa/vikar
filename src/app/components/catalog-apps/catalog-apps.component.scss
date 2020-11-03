@@ -1,0 +1,20 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+
+  .inner {
+    flex-basis: 100%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 40px;
+
+    app-catalog-apps-item {
+      display: block;
+      flex: 0 1 calc(25% - 24px);
+      min-height: 300px;
+      margin: 12px;
+    }
+  }
+}

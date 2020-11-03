@@ -1,19 +1,19 @@
 import { trigger, state, transition, style, animate } from '@angular/animations';
 
-export const menuAnimation =
-    trigger('menuAnimation', [
+export const backAnimation =
+    trigger('backAnimation', [
         transition(':enter', [
             style({
-                transform: 'translateX(-100%)'
+                opacity: '0'
             }),
-            animate('.7s ease-out',
+            animate('.5s ease-out',
                 style({
-                    transform: '*'
+                    opacity: '*'
                 }))
         ]),
         transition(':leave', [
-            style({ transform: '*' }),
+            style({ opacity: '*' }),
             animate('.3s ease-in',
-                style({ transform: 'translateX(-100%)' }))
+                style({ opacity: '0' }))
         ])
     ]);

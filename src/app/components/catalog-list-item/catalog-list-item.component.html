@@ -1,0 +1,11 @@
+<div [ngClass]="{'good': true, 'last': isLast}">
+  <div class="good-img-wrap">
+    <div class="good-img" style="background-image: url('/assets/img/bmw-01.jpg');"></div>
+  </div>
+  <div class="good-info">{{good}}</div>
+  <div class="good-btns">
+    <button class="minus" (click)="minus()">-</button>
+    <div class="value">{{value}}</div>
+    <button class="plus" (click)="plus()">+</button>
+  </div>
+</div>
