@@ -5,3 +5,16 @@ html {
 a {
   color: var(--color-fifth);
 }
+
+.vi-btn {
+  border: solid 1px #efefef;
+  background-color: white;
+  border-radius: 6px;
+  min-width: 160px;
+  padding: 22px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: unset;
+  text-transform: uppercase;
+}

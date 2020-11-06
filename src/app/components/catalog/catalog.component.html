@@ -23,6 +23,8 @@
       </svg>
     </div>
   </div>
-  <app-catalog-list *ngIf="isList" [goods]="goods"></app-catalog-list>
-  <app-catalog-apps *ngIf="!isList" [goods]="goods"></app-catalog-apps>
+  <div class="body">
+    <app-catalog-list *ngIf="isList" [goods]="goods"></app-catalog-list>
+    <app-catalog-apps *ngIf="!isList" [goods]="goods"></app-catalog-apps>
+  </div>
 </div>

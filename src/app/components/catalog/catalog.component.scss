@@ -14,6 +14,7 @@
 
     h2 {
       margin: 0;
+      padding-left: 12px;
     }
 
     &-btns {
@@ -41,6 +42,18 @@
           border-color: var(--color-first);
         }
       }
+    }
+  }
+
+  .body {
+    width: 100%;
+    max-width: 1140px;
+    align-self: center;
+
+    app-catalog-list,
+    app-catalog-apps {
+      display: block;
+      width: 100%;
     }
   }
 }

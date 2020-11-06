@@ -4,11 +4,11 @@
 
   .inner {
     flex-basis: 100%;
-    max-width: 1140px;
+    // max-width: 1140px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 40px;
+    // padding: 40px;
 
     app-catalog-apps-item {
       display: block;
