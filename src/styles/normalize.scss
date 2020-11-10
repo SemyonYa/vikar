@@ -1,3 +1,7 @@
+* {
+  // box-sizing: border-box;
+}
+
 html {
   color: rgb(94, 94, 94);
 }
@@ -17,4 +21,9 @@ a {
   align-items: center;
   text-decoration: unset;
   text-transform: uppercase;
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+  -webkit-filter: grayscale(100%) url('grayscale-filter.svg');
+  filter: grayscale(100%) url('grayscale-filter.svg');
 }

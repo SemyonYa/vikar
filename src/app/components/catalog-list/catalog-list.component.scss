@@ -2,9 +2,36 @@
   display: flex;
   flex-direction: column;
   padding-left: 12px;
+  box-sizing: border-box;
 
-  app-catalog-list-item {
-    display: block;
-    // width: 100%;
+  .category {
+    h3 {
+      font-size: calc(12px + 1vw);
+      border-bottom: 1px solid transparent;
+      border-image: linear-gradient(to left, transparent 0%, transparent 30%, var(--color-first) 100%);
+      border-image-slice: 1;
+      padding-top: 10px;
+      padding-bottom: 3px;
+      color: var(--color-first);
+    }
+
+    p {
+      max-width: 50vw;
+    }
+
+    .good-group {
+      margin-bottom: 40px;
+
+      h4 {
+        font-size: calc(12px + .5vw);
+        margin: 10px 0;
+      }
+
+      app-catalog-list-item {
+        display: block;
+        box-sizing: border-box;
+      }
+    }
   }
+
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { pageAnimation } from 'src/app/animations/page.animation';
+import { Category } from 'src/app/models/category';
 
 @Component({
   selector: 'app-catalog-list',
@@ -8,7 +9,7 @@ import { pageAnimation } from 'src/app/animations/page.animation';
   animations: [pageAnimation]
 })
 export class CatalogListComponent implements OnInit {
-  @Input() goods: string[];
+  @Input() categories: Category[];
 
   constructor() { }
 

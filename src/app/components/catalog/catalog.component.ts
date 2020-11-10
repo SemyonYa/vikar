@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { pageAnimation } from 'src/app/animations/page.animation';
+import { Category } from 'src/app/models/category';
 import { DataApiService } from 'src/app/services/data-api.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { DataApiService } from 'src/app/services/data-api.service';
 })
 export class CatalogComponent implements OnInit {
   isList: boolean = true;
+  categories: Category[] = [];
   goods: string[] = [
     'one',
     'two',
@@ -20,7 +22,12 @@ export class CatalogComponent implements OnInit {
   constructor(private dataApiService: DataApiService) { }
 
   ngOnInit() {
-
+    this.dataApiService.categories$
+      .subscribe(
+        cs => {
+          this.categories = cs;
+        }
+      );
   }
 
   toggleView(v: boolean) {

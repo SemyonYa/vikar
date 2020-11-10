@@ -19,6 +19,7 @@ import { CatalogListComponent } from './components/catalog-list/catalog-list.com
 import { CatalogAppsComponent } from './components/catalog-apps/catalog-apps.component';
 import { CatalogAppsItemComponent } from './components/catalog-apps-item/catalog-apps-item.component';
 import { CatalogListItemComponent } from './components/catalog-list-item/catalog-list-item.component';
+import { DataApiService } from './services/data-api.service';
 
 @NgModule({
   declarations: [
@@ -46,4 +47,8 @@ import { CatalogListItemComponent } from './components/catalog-list-item/catalog
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { } 
+export class AppModule {
+  constructor(private dataApiService: DataApiService) {
+    dataApiService.init();
+  }
+} 

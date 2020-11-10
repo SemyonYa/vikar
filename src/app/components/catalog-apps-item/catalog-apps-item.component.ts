@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { pageAnimation } from 'src/app/animations/page.animation';
+import { Good } from 'src/app/models/good';
+import { GoodGroup } from 'src/app/models/good-group';
 
 @Component({
   selector: 'app-catalog-apps-item',
@@ -7,7 +8,8 @@ import { pageAnimation } from 'src/app/animations/page.animation';
   styleUrls: ['./catalog-apps-item.component.scss']
 })
 export class CatalogAppsItemComponent implements OnInit {
-  @Input() good: string;
+  @Input() good: Good;
+  @Input() goodGroup: GoodGroup;
   value = 0;
 
   constructor() { }

@@ -1,8 +1,20 @@
 <div [ngClass]="{'good': true, 'last': isLast}">
   <div class="good-img-wrap">
-    <div class="good-img" style="background-image: url('/assets/img/bmw-01.jpg');"></div>
+    <div class="good-img" style="background-image: url('{{goodGroup.img}}');"></div>
   </div>
-  <div class="good-info">{{good}}</div>
+  <div class="good-info">
+    <h6>{{good?.name}}</h6>
+    <div class="good-info-params">
+      <p *ngIf="good.thickness">{{goodGroup.thicknessOf}}: <strong>{{good.thickness}}</strong></p>
+      <p *ngIf="good.size">Размер листа: <strong>{{good.size}}</strong></p>
+      <p *ngIf="good.square">Площадь листа: <strong>{{good.square}}</strong></p>
+      <p *ngIf="good.length">Длина рулона: <strong>{{good.length}}</strong></p>
+      <p *ngIf="good.width">Ширина рулона: <strong>{{good.width}}</strong></p>
+    </div>
+  </div>
+  <div class="good-price">
+    {{good.price}} <span>&#8381;</span>
+  </div>
   <div class="good-btns">
     <button class="minus" (click)="minus()">-</button>
     <div class="value">{{value}}</div>

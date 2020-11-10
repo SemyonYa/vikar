@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Good } from 'src/app/models/good';
+import { GoodGroup } from 'src/app/models/good-group';
 
 @Component({
   selector: 'app-catalog-list-item',
@@ -6,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./catalog-list-item.component.scss']
 })
 export class CatalogListItemComponent implements OnInit {
-  @Input() good: string;
+  @Input() good: Good;
+  @Input() goodGroup: GoodGroup;
   @Input() isLast: boolean;
   value = 0;
 

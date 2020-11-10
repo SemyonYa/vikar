@@ -1,6 +1,6 @@
-<div class="wrap" (scroll)="scrollHandler($event)" @pageAnimation>
+<div class="wrap" @pageAnimation>
   <!-- FIRST -->
-  <div class="first">
+  <div #first class="first">
     <div class="logo">
       <img src="/assets/icon/logo2.svg">
     </div>
@@ -15,10 +15,12 @@
     </div>
   </div>
   <!-- SECOND -->
-  <div class="second">
-    <div class="inner catalog">
+  <div #second class="second">
+    <div [ngClass]="{'inner': true, 'catalog': true, 'before': !loaded}">
       <div class="catalog-text">
-        <h3>Каталог</h3>
+        <div class="catalog-text-title">
+          <h3>Каталог</h3>
+        </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit sit atque aliquid soluta maiores
           eaque, accusamus, dolorem molestias culpa dolorum neque est veniam nostrum ea. Consequatur nesciunt quis
@@ -34,14 +36,71 @@
         </div>
       </div>
       <div class="catalog-img">
-        <img src="/assets/img/img-02.png">
+        <img #secondImg src="/assets/img/img-02.png">
       </div>
     </div>
   </div>
-  <div class="third">
-    <h3>Материалы</h3>
+  <!-- THIRD -->
+  <div #third class="third">
+    <div class="third-title">
+      <h3>Материалы</h3>
+    </div>
+    <div class="carousel">
+      <div
+        [ngClass]="{'carousel-item': true, 'center': carouselItemActive == 0, 'left': carouselItemActive == 1, 'left-hidden': carouselItemActive == 2}"
+        (click)="showCarouselItem(0)">
+        <h6>Вибропоглощающие материалы</h6>
+        <img src="/assets/img/img-01.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente possimus magnam doloribus earum saepe ullam
+          architecto quasi atque, deleniti excepturi, molestiae iusto dicta odit molestias obcaecati. Voluptas maiores
+          facilis nisi!</p>
+      </div>
+      <div
+        [ngClass]="{'carousel-item': true, 'right': carouselItemActive == 0, 'center': carouselItemActive == 1, 'left': carouselItemActive == 2}"
+        (click)="showCarouselItem(1)">
+        <h6>Шумо-теплоизолирующие материалы</h6>
+        <img src="/assets/img/img-02.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente possimus magnam doloribus earum saepe ullam
+          architecto quasi atque, deleniti excepturi, molestiae iusto dicta odit molestias obcaecati. Voluptas maiores
+          facilis nisi!</p>
+      </div>
+      <div
+        [ngClass]="{'carousel-item': true, 'right-hidden': carouselItemActive == 0, 'right': carouselItemActive == 1, 'center': carouselItemActive == 2}"
+        (click)="showCarouselItem(2)">
+        <h6>Антискрипскрипные материалы</h6>
+        <img src="/assets/img/img-03.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente possimus magnam doloribus earum saepe ullam
+          architecto quasi atque, deleniti excepturi, molestiae iusto dicta odit molestias obcaecati. Voluptas maiores
+          facilis nisi!</p>
+      </div>
+    </div>
+    <div class="carousel-btns">
+      <div (click)="showCarouselItem(0)" [ngClass]="{'carousel-btns-item': true, 'active': carouselItemActive == 0}">
+        1
+      </div>
+      <div (click)="showCarouselItem(1)" [ngClass]="{'carousel-btns-item': true, 'active': carouselItemActive == 1}">
+        2
+      </div>
+      <div (click)="showCarouselItem(2)" [ngClass]="{'carousel-btns-item': true, 'active': carouselItemActive == 2}">
+        3
+      </div>
+    </div>
   </div>
   <div class="fourth">
-    <h3>Контакты</h3>
+    <div class="fourth-title">
+      <h3>Контакты</h3>
+    </div>
+    <div class="shops">
+      <div class="shops-item">Shop #1</div>
+      <div class="shops-item">Shop #2</div>
+      <div class="shops-item">Shop #3</div>
+      <div class="shops-item">Shop #4</div>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A617304f7d4aaec1c55c8c8e030322237ca7c61b60a52db9b864072729c63d5d4&amp;source=constructor"
+        width="100%" height="600" frameborder="0">
+      </iframe>
+    </div>
   </div>
 </div>

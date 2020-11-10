@@ -5,16 +5,41 @@
   .inner {
     flex-basis: 100%;
     // max-width: 1140px;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     // padding: 40px;
 
-    app-catalog-apps-item {
-      display: block;
-      flex: 0 1 calc(25% - 24px);
-      min-height: 300px;
-      margin: 12px;
+    .category {
+      h3 {
+        font-size: calc(12px + 1vw);
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to left, transparent 0%, transparent 20%, var(--color-first) 40%, var(--color-first) 60%, transparent 80%);
+        border-image-slice: 1;
+        padding-top: 10px;
+        padding-bottom: 3px;
+        color: var(--color-first);
+        text-align: center;
+      }
+
+      .good-group {
+        margin-bottom: 40px;
+        h4 {
+          font-size: calc(12px + .5vw);
+          margin: 10px 12px;
+        }
+
+        .goods {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+
+          app-catalog-apps-item {
+            display: block;
+            flex: 0 1 calc(25% - 24px);
+            min-height: 300px;
+            margin: 12px;
+          }
+        }
+      }
     }
+
   }
 }

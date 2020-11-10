@@ -1,4 +1,12 @@
 <div class="wrap" @pageAnimation>
-  <app-catalog-list-item *ngFor="let good of goods; let isLast = last" [good]="good" [isLast]="isLast">
-  </app-catalog-list-item>
+  <div *ngFor="let category of categories" class="category">
+    <h3>{{category?.name}}</h3>
+    <!-- <p>{{category?.description}}</p> -->
+    <div *ngFor="let goodGroup of category.goodGroups; let goodGroupLast = last" class="good-group">
+      <h4>{{goodGroup.name}}</h4>
+      <app-catalog-list-item *ngFor="let good of goodGroup.goods; let goodLast = last" [goodGroup]="goodGroup"
+        [good]="good" [isLast]="goodGroupLast && goodLast">
+      </app-catalog-list-item>
+    </div>
+  </div>
 </div>
